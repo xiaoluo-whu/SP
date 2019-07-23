@@ -1,0 +1,16 @@
+server:
+  port: 3021
+
+spring:
+  dubbo:
+    application:
+      name: sp-web
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    scan: com.bnq.supplier
+
+logging:
+  file: ${user.home}/logs/sp-web.log
+  pattern:
+    file: '%date{yyyy-MM-dd HH:mm:ss}||%-5level||${HOSTNAME}||${spring.dubbo.application.name}||00||00||%logger{36}||%msg%n'
+    console: '%date{yyyy-MM-dd HH:mm:ss}||%-5level||${HOSTNAME}||${spring.dubbo.application.name}||00||00||%logger{36}||%msg%n'

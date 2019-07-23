@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.bnq</groupId>
+        <artifactId>compass-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.bnq.supplier.sp</groupId>
+    <artifactId>sp-pom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>sp-pom</name>
+    <description>Supplier Portal</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sp-api</module>
+        <module>sp-common</module>
+        <module>sp-dao</module>
+        <module>sp-service</module>
+        <module>sp-web</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jdk.version>1.8</jdk.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <!-- 代码工具 -->
+        <lombok.version>1.18.6</lombok.version>
+        <!-- 业务 -->
+        <sp.version>1.0.0-SNAPSHOT</sp.version>
+        <springboot.dubbo.version>1.0.0</springboot.dubbo.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 代码工具 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- 业务 -->
+            <dependency>
+                <groupId>com.bnq.supplier.sp</groupId>
+                <artifactId>sp-api</artifactId>
+                <version>${sp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bnq.supplier.sp</groupId>
+                <artifactId>sp-common</artifactId>
+                <version>${sp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bnq.supplier.sp</groupId>
+                <artifactId>sp-dao</artifactId>
+                <version>${sp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.dubbo.springboot</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>${springboot.dubbo.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://maven.bnq.com.cn:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://maven.bnq.com.cn:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>maven-snapshots</id>
+            <url>http://maven.bnq.com.cn:8081/repository/maven-snapshots/</url>
+        </repository>
+    </repositories>
+
+</project>
