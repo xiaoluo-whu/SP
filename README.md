@@ -27,10 +27,12 @@
                   nohup java -jar sp-web-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod &  
 
 ## auto-generate mybatis mappers, interfaces and models
-	The project contains a plugin "mybatis-generator", which could generate mybatis mappers, interfaces and models with a simple few clicks.   
+	The project contains a plugin "mybatis-generator", which could generate mybatis mappers, interfaces and models with a simple few clicks.
 	Suppose you want to add those files according to the mysql table "demo".   
-	First of all, modifying the generatorConfig.xml through adding the following line in the area of tag <context id="MysqlContext">.    
-	<table tableName="demo" domainObjectName="Demo"><property name="useActualColumnNames" value="false" /></table>  
+	First of all, modifying the generatorConfig.xml through adding the following line in the area of tag <context id="MysqlContext">.  
+	
+		<table tableName="demo" domainObjectName="Demo"><property name="useActualColumnNames" value="false" /></table>  
+		
 	Then, click the idea maven side-bar on the right, find the plugin and right click it, then select "Run Maven Build".   	     Then those tedius mapper files could be auto-generated.     
 
 ## How to launch:   
