@@ -33,7 +33,9 @@
 	
 		<table tableName="demo" domainObjectName="Demo"><property name="useActualColumnNames" value="false" /></table>  
 		
-	Then, click the idea maven side-bar on the right, find the plugin and right click it, then select "Run Maven Build".   	     Then those tedius mapper files could be auto-generated.     
+	Then, click the idea maven side-bar on the right, find the plugin and right click it, then select "Run Maven Build".     	   
+	
+	Then those tedius mapper files could be auto-generated.     
 
 ## How to launch:   
 	1.switch to the root directory of the project SP/, run    
