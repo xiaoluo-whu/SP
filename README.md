@@ -3,6 +3,12 @@
 
 ## Framework:
 	spring boot 2.1 + dubbo + mybatis + RocketMQ + zookeeper 
+	
+## System requirements:
+	JDK8+  
+	maven3.3+
+	RocketMQ4.4.0
+	zookeeper3.5.5
 
 ## Modules:
 	There are 5 modules in total.  
@@ -19,6 +25,13 @@
 	If you want to make a package for production environment, you should launch the project through following command:
                   nohup java -jar sp-service-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod &  
                   nohup java -jar sp-web-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod &  
+
+## auto-generate mybatis mappers, interfaces and models
+	The project contains a plugin "mybatis-generator", which could generate mybatis mappers, interfaces and models with a simple few clicks.   
+	Suppose you want to add those files according to the mysql table "demo".   
+	First of all, modifying the generatorConfig.xml through adding the following line in the area of tag <context id="MysqlContext">.    
+	<table tableName="demo" domainObjectName="Demo"><property name="useActualColumnNames" value="false" /></table>  
+	Then, click the idea maven side-bar on the right, find the plugin and right click it, then select "Run Maven Build".   	     Then those tedius mapper files could be auto-generated.     
 
 ## How to launch:   
 	1.switch to the root directory of the project SP/, run    
