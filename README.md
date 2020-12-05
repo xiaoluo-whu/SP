@@ -14,9 +14,9 @@
 	There are 5 modules in total.  
 	sp-api: service interfaces  
 	sp-common: frequently used util classes and constants in RPC  
-	sp-dao: mybatis mappers, models and plugins  
-	sp-service: dubbo provider, implementation of service interfaces, RocketMQ util  
-	sp-web: dubbo consumer, controllers for http restful  
+	sp-dao: MyBatis mappers, models and plugins  
+	sp-service: Dubbo provider, implementation of service interfaces, RocketMQ util  
+	sp-web: Dubbo consumer, controllers for http RESTful  
 
 ## distribution environment:  
 	see the application*.yml in sp-web and sp-service for reference.  
@@ -44,4 +44,4 @@
                    nohup java -jar sp-service-1.0.0-SNAPSHOT.jar &  
 	3.switch to sp-web/target, enter the following text in the command line  
                    nohup java -jar sp-web-1.0.0-SNAPSHOT.jar &  
-	4. then you can send http restful request from restlet or postman.  
+	4. then you can send http RESTful request from Restlet or Postman.  
