@@ -1,14 +1,14 @@
 # SP
-	a server prototype combine spring boot 2 and dubbo
+	a server prototype combine Spring Boot 2.1 and Dubbo
 
 ## Framework:
-	spring boot 2.1 + dubbo + mybatis + RocketMQ + zookeeper 
+	Spring Boot 2.1 + Dubbo + MyBatis + RocketMQ + ZooKeeper 
 	
 ## System requirements:
-	JDK8+  
-	maven3.3+
-	RocketMQ4.4.0
-	zookeeper3.5.5
+	JDK 8+  
+	Maven 3.3+
+	RocketMQ 4.4.0
+	ZooKeeper 3.5.5
 
 ## Modules:
 	There are 5 modules in total.  
