@@ -2,7 +2,7 @@
 	a server prototype combine Spring Boot 2.1 and Dubbo
 
 ## Framework:
-	Spring Boot 2.1 + Dubbo + MyBatis + RocketMQ + ZooKeeper 
+	Spring Boot 2.1 + Dubbo + ZooKeeper + MySQL + Redis
 	
 ## System requirements:
 	JDK 8+  
